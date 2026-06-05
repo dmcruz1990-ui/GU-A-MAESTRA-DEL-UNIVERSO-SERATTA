@@ -7,7 +7,7 @@
   <title>Seratta Grand Tour — Pasaporte Digital</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -345,7 +345,7 @@
       </div>
       <div class="terr-row">
         <div class="terr-card" style="background-image:linear-gradient(180deg,transparent,rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1543340713-8c1f1b25b5a8?w=300')"><span class="t-lbl">BOGOTÁ 114</span><span class="t-pct">60%</span><div class="t-bar"><div style="--p:60%"></div></div></div>
-        <div class="terr-card" style="background-image:linear-gradient(180deg,transparent,rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300')"><span class="t-lbl">ATLANTIS</span><span class="t-pct">80%</span><div class="t-bar"><div style="--p:80%"></div></div></div>
+        <div class="terr-card" style="background-image:linear-gradient(180deg,transparent,rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=80')"><span class="t-lbl">ATLANTIS</span><span class="t-pct">80%</span><div class="t-bar"><div style="--p:80%"></div></div></div>
         <div class="terr-card" style="background-image:linear-gradient(180deg,transparent,rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?w=300')"><span class="t-lbl">CAMPO DEI FIORI</span><span class="t-pct">40%</span><div class="t-bar"><div style="--p:40%"></div></div></div>
         <div class="terr-card" style="background-image:linear-gradient(180deg,transparent,rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1599809275671-b5942cabc7a2?w=300')"><span class="t-lbl">CARTAGENA</span><span class="t-pct">20%</span><div class="t-bar"><div style="--p:20%"></div></div></div>
         <div class="terr-card" style="background-image:linear-gradient(180deg,transparent,rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1568632234157-ce7aecd03d0d?w=300')"><span class="t-lbl">MEDELLÍN</span><span class="t-pct">50%</span><div class="t-bar"><div style="--p:50%"></div></div></div>
@@ -415,7 +415,7 @@
       </div>
       <div class="territories">
         <div class="territory"><div class="t-img" style="background-image:url('https://images.unsplash.com/photo-1543340713-8c1f1b25b5a8?w=300')"></div><div class="t-name">BOGOTÁ 114</div><div class="t-sub">3 / 6 SELLOS</div><div class="t-bar"><div style="--p:60%"></div></div><div class="t-pct">60%</div></div>
-        <div class="territory active"><div class="t-img" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300')"></div><div class="t-name">ATLANTIS</div><div class="t-sub">4 / 6 SELLOS</div><div class="t-bar"><div style="--p:80%"></div></div><div class="t-pct">80%</div></div>
+        <div class="territory active"><div class="t-img" style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=80')"></div><div class="t-name">ATLANTIS</div><div class="t-sub">4 / 6 SELLOS</div><div class="t-bar"><div style="--p:80%"></div></div><div class="t-pct">80%</div></div>
         <div class="territory"><div class="t-img" style="background-image:url('https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?w=300')"></div><div class="t-name">CAMPO DEI FIORI</div><div class="t-sub">2 / 5 SELLOS</div><div class="t-bar"><div style="--p:40%"></div></div><div class="t-pct">40%</div></div>
         <div class="territory"><div class="t-img" style="background-image:url('https://images.unsplash.com/photo-1599809275671-b5942cabc7a2?w=300')"></div><div class="t-name">CARTAGENA</div><div class="t-sub">2 / 6 SELLOS</div><div class="t-bar"><div style="--p:33%"></div></div><div class="t-pct">33%</div></div>
         <div class="territory"><div class="t-img" style="background-image:url('https://images.unsplash.com/photo-1568632234157-ce7aecd03d0d?w=300')"></div><div class="t-name">MEDELLÍN</div><div class="t-sub">3 / 6 SELLOS</div><div class="t-bar"><div style="--p:50%"></div></div><div class="t-pct">50%</div></div>
@@ -434,40 +434,64 @@
         </div>
         <div class="stamps-grid">
           <div class="stamp-card conquered">
-            <div class="stamp-bg" style="--c:#c9a468">ÁNIMA</div>
-            <div class="sn">ATLANTIS</div>
+            <div class="postage" style="--c:#c9a468">
+              <div class="postage__top"><span class="postage__val">100</span><span class="postage__country">SERATTA</span></div>
+              <div class="postage__art">🏺</div>
+              <div class="postage__name">ÁNIMA</div>
+              <div class="postage__terr">ATLANTIS</div>
+            </div>
             <div class="sd">CONQUISTADO<br/>18 JUN 2026</div>
             <div class="memo small">+100<br/><span>MEMORIAS</span></div>
           </div>
           <div class="stamp-card conquered">
-            <div class="stamp-bg" style="--c:#a85c3c">GALLO COLORADO</div>
-            <div class="sn">ATLANTIS</div>
+            <div class="postage" style="--c:#a85c3c">
+              <div class="postage__top"><span class="postage__val">100</span><span class="postage__country">SERATTA</span></div>
+              <div class="postage__art">🐓</div>
+              <div class="postage__name">GALLO COLORADO</div>
+              <div class="postage__terr">ATLANTIS</div>
+            </div>
             <div class="sd">CONQUISTADO<br/>02 MAY 2026</div>
             <div class="memo small">+100<br/><span>MEMORIAS</span></div>
           </div>
           <div class="stamp-card conquered">
-            <div class="stamp-bg" style="--c:#b56c8a">TODO ES COLOR<br/>DE ROSA</div>
-            <div class="sn">ATLANTIS</div>
+            <div class="postage" style="--c:#b56c8a">
+              <div class="postage__top"><span class="postage__val">100</span><span class="postage__country">SERATTA</span></div>
+              <div class="postage__art">🌹</div>
+              <div class="postage__name">TODO ES COLOR DE ROSA</div>
+              <div class="postage__terr">ATLANTIS</div>
+            </div>
             <div class="sd">CONQUISTADO<br/>21 ABR 2026</div>
             <div class="memo small">+100<br/><span>MEMORIAS</span></div>
           </div>
           <div class="stamp-card conquered">
-            <div class="stamp-bg" style="--c:#3a6e57">VIVA LA VIDA</div>
-            <div class="sn">ATLANTIS</div>
+            <div class="postage" style="--c:#3a6e57">
+              <div class="postage__top"><span class="postage__val">100</span><span class="postage__country">SERATTA</span></div>
+              <div class="postage__art">🐉</div>
+              <div class="postage__name">VIVA LA VIDA</div>
+              <div class="postage__terr">ATLANTIS</div>
+            </div>
             <div class="sd">CONQUISTADO<br/>10 MAR 2026</div>
             <div class="memo small">+100<br/><span>MEMORIAS</span></div>
           </div>
           <div class="stamp-card locked">
-            <div class="stamp-bg" style="--c:#6b6b6b">OTAFUKU</div>
-            <div class="sn">ATLANTIS</div>
+            <div class="postage" style="--c:#6b6b6b">
+              <div class="postage__top"><span class="postage__val">?</span><span class="postage__country">SERATTA</span></div>
+              <div class="postage__art">🎎</div>
+              <div class="postage__name">OTAFUKU</div>
+              <div class="postage__terr">ATLANTIS</div>
+            </div>
             <div class="sd locked">POR DESCUBRIR</div>
-            <button class="btn btn--gold-outline tiny">RESERVAR</button>
+            <button class="btn btn--gold-outline tiny" data-go="reservas">RESERVAR</button>
           </div>
           <div class="stamp-card locked">
-            <div class="stamp-bg" style="--c:#6b6b6b">SEKAI<br/>OMAKASE</div>
-            <div class="sn">ATLANTIS</div>
+            <div class="postage" style="--c:#6b6b6b">
+              <div class="postage__top"><span class="postage__val">?</span><span class="postage__country">SERATTA</span></div>
+              <div class="postage__art">⛩</div>
+              <div class="postage__name">SEKAI OMAKASE</div>
+              <div class="postage__terr">ATLANTIS</div>
+            </div>
             <div class="sd locked">POR DESCUBRIR</div>
-            <button class="btn btn--gold-outline tiny">RESERVAR</button>
+            <button class="btn btn--gold-outline tiny" data-go="reservas">RESERVAR</button>
           </div>
         </div>
         <div class="legend">
@@ -563,48 +587,51 @@
           <h3 class="serif lg dark">TERRITORIO 114 · BOGOTÁ</h3>
           <a class="link-gold">VER TODOS (5) →</a>
         </div>
-        <div class="rest-row">
-          <div class="rest-card rest-card--hero" style="background-image:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.85)),url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400')">
-            <h3 class="serif">BOGOTÁ 114</h3>
-            <p class="small">El corazón<br/>gastronómico<br/>de Seratta.</p>
-            <p class="overline gold">― 5 EXPERIENCIAS</p>
-          </div>
-          <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1551218808-94e220e084d2?w=300')">
-            <div class="badge">NUEVO</div><div class="bookmark">🔖</div>
-            <div class="rc-bottom">
-              <h4 class="serif">SALVO</h4>
-              <p class="overline">COCINA DE FUEGO</p>
-              <p class="memo-line">★ 100 MEMORIAS</p>
-              <button class="btn btn--gold tiny">RESERVAR</button>
+        <div class="carousel">
+          <div class="rest-row rest-row--scroll">
+            <div class="rest-card rest-card--hero" style="background-image:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.85)),url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400')">
+              <h3 class="serif">BOGOTÁ 114</h3>
+              <p class="small">El corazón<br/>gastronómico<br/>de Seratta.</p>
+              <p class="overline gold">― 5 EXPERIENCIAS</p>
+            </div>
+            <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1551218808-94e220e084d2?w=300')">
+              <div class="badge">NUEVO</div><div class="bookmark">🔖</div>
+              <div class="rc-bottom">
+                <h4 class="serif">SALVO</h4>
+                <p class="overline">COCINA DE FUEGO</p>
+                <p class="memo-line">★ 100 MEMORIAS</p>
+                <button class="btn btn--gold tiny">RESERVAR</button>
+              </div>
+            </div>
+            <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=300')">
+              <div class="badge">POPULAR</div><div class="bookmark">🔖</div>
+              <div class="rc-bottom">
+                <h4 class="serif">CHALCO</h4>
+                <p class="overline">COCINA CONTEMPORÁNEA</p>
+                <p class="memo-line">★ 100 MEMORIAS</p>
+                <button class="btn btn--gold tiny">RESERVAR</button>
+              </div>
+            </div>
+            <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=300')">
+              <div class="bookmark">🔖</div>
+              <div class="rc-bottom">
+                <h4 class="serif">OSAKI 89</h4>
+                <p class="overline">JAPONÉS</p>
+                <p class="memo-line">★ 100 MEMORIAS</p>
+                <button class="btn btn--gold tiny">RESERVAR</button>
+              </div>
+            </div>
+            <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300')">
+              <div class="bookmark">🔖</div>
+              <div class="rc-bottom">
+                <h4 class="serif">CASA MEDINA</h4>
+                <p class="overline">COCINA COLOMBIANA</p>
+                <p class="memo-line">★ 100 MEMORIAS</p>
+                <button class="btn btn--gold tiny">RESERVAR</button>
+              </div>
             </div>
           </div>
-          <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=300')">
-            <div class="badge">POPULAR</div><div class="bookmark">🔖</div>
-            <div class="rc-bottom">
-              <h4 class="serif">CHALCO</h4>
-              <p class="overline">COCINA<br/>CONTEMPORÁNEA</p>
-              <p class="memo-line">★ 100 MEMORIAS</p>
-              <button class="btn btn--gold tiny">RESERVAR</button>
-            </div>
-          </div>
-          <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=300')">
-            <div class="bookmark">🔖</div>
-            <div class="rc-bottom">
-              <h4 class="serif">OSAKI 89</h4>
-              <p class="overline">JAPONÉS</p>
-              <p class="memo-line">★ 100 MEMORIAS</p>
-              <button class="btn btn--gold tiny">RESERVAR</button>
-            </div>
-          </div>
-          <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300')">
-            <div class="bookmark">🔖</div>
-            <div class="rc-bottom">
-              <h4 class="serif">CASA MEDINA</h4>
-              <p class="overline">COCINA COLOMBIANA</p>
-              <p class="memo-line">★ 100 MEMORIAS</p>
-              <button class="btn btn--gold tiny">RESERVAR</button>
-            </div>
-          </div>
+          <button class="carousel__arrow" aria-label="Ver más">›</button>
         </div>
       </div>
 
@@ -666,43 +693,46 @@
           <h3 class="serif lg dark">CAMPO DEI FIORI</h3>
           <a class="link-gold">VER TODOS (4) →</a>
         </div>
-        <div class="rest-row">
-          <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300')">
-            <div class="badge">CLÁSICO</div><div class="bookmark">🔖</div>
-            <div class="rc-bottom">
-              <h4 class="serif">CAMPO DEI FIORI</h4>
-              <p class="overline">ITALIANO</p>
-              <p class="memo-line">★ 100 MEMORIAS</p>
-              <button class="btn btn--gold tiny">RESERVAR</button>
+        <div class="carousel">
+          <div class="rest-row rest-row--scroll">
+            <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300')">
+              <div class="badge">CLÁSICO</div><div class="bookmark">🔖</div>
+              <div class="rc-bottom">
+                <h4 class="serif">CAMPO DEI FIORI</h4>
+                <p class="overline">ITALIANO</p>
+                <p class="memo-line">★ 100 MEMORIAS</p>
+                <button class="btn btn--gold tiny">RESERVAR</button>
+              </div>
+            </div>
+            <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1551218808-94e220e084d2?w=300')">
+              <div class="badge">POPULAR</div><div class="bookmark">🔖</div>
+              <div class="rc-bottom">
+                <h4 class="serif">OTTO</h4>
+                <p class="overline">ITALIANO CONTEMPORÁNEO</p>
+                <p class="memo-line">★ 100 MEMORIAS</p>
+                <button class="btn btn--gold tiny">RESERVAR</button>
+              </div>
+            </div>
+            <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=300')">
+              <div class="badge">NUEVO</div><div class="bookmark">🔖</div>
+              <div class="rc-bottom">
+                <h4 class="serif">SEKAI</h4>
+                <p class="overline">ASIÁTICO</p>
+                <p class="memo-line">★ 100 MEMORIAS</p>
+                <button class="btn btn--gold tiny">RESERVAR</button>
+              </div>
+            </div>
+            <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300')">
+              <div class="bookmark">🔖</div>
+              <div class="rc-bottom">
+                <h4 class="serif">BAKÚ</h4>
+                <p class="overline">NIKKEI</p>
+                <p class="memo-line">★ 100 MEMORIAS</p>
+                <button class="btn btn--gold tiny">RESERVAR</button>
+              </div>
             </div>
           </div>
-          <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1551218808-94e220e084d2?w=300')">
-            <div class="badge">POPULAR</div><div class="bookmark">🔖</div>
-            <div class="rc-bottom">
-              <h4 class="serif">OTTO</h4>
-              <p class="overline">ITALIANO CONTEMPORÁNEO</p>
-              <p class="memo-line">★ 100 MEMORIAS</p>
-              <button class="btn btn--gold tiny">RESERVAR</button>
-            </div>
-          </div>
-          <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=300')">
-            <div class="badge">NUEVO</div><div class="bookmark">🔖</div>
-            <div class="rc-bottom">
-              <h4 class="serif">SEKAI</h4>
-              <p class="overline">ASIÁTICO</p>
-              <p class="memo-line">★ 100 MEMORIAS</p>
-              <button class="btn btn--gold tiny">RESERVAR</button>
-            </div>
-          </div>
-          <div class="rest-card" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300')">
-            <div class="bookmark">🔖</div>
-            <div class="rc-bottom">
-              <h4 class="serif">BAKÚ</h4>
-              <p class="overline">NIKKEI</p>
-              <p class="memo-line">★ 100 MEMORIAS</p>
-              <button class="btn btn--gold tiny">RESERVAR</button>
-            </div>
-          </div>
+          <button class="carousel__arrow" aria-label="Ver más">›</button>
         </div>
       </div>
 

@@ -36,6 +36,22 @@
     });
   });
 
+  // Netflix-style carousels: arrow scrolls one viewport; flips at the end
+  document.querySelectorAll('.carousel').forEach(car => {
+    const row = car.querySelector('.rest-row--scroll');
+    const arrow = car.querySelector('.carousel__arrow');
+    if (!row || !arrow) return;
+    arrow.addEventListener('click', () => {
+      const atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 4;
+      row.scrollBy({ left: atEnd ? -row.scrollWidth : row.clientWidth * 0.8, behavior: 'smooth' });
+    });
+    const sync = () => {
+      const atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 4;
+      arrow.classList.toggle('is-end', atEnd);
+    };
+    row.addEventListener('scroll', sync, { passive: true });
+  });
+
   const hash = window.location.hash.replace('#', '');
   if (hash && document.querySelector(`[data-screen="${hash}"]`)) show(hash);
 
