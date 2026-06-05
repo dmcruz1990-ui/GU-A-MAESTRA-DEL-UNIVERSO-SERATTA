@@ -77,25 +77,219 @@
 
       <div class="card universe">
         <div class="universe__head">
-          <div>
+          <div class="universe__text">
             <div class="card__label">NUESTRO UNIVERSO <span class="spark gold">✦</span></div>
             <p class="muted small">Explora nuestros 5 territorios<br/>y vive experiencias únicas<br/>en el universo Seratta.</p>
-            <button class="btn btn--gold-outline">EXPLORAR TERRITORIOS →</button>
+            <button class="btn btn--gold-outline" data-go="reservas">EXPLORAR TERRITORIOS →</button>
           </div>
           <div class="map">
-            <div class="map__compass">✺</div>
-            <div class="map__node" style="top:8%;left:62%"><span class="pin-num">4</span><span class="map__lbl">CARTAGENA</span></div>
-            <div class="map__node" style="top:34%;left:18%"><span class="pin-num">5</span><span class="map__lbl">MEDELLÍN</span></div>
-            <div class="map__node" style="top:62%;left:25%"><span class="pin-num">1</span><span class="map__lbl">BOGOTÁ 114</span></div>
-            <div class="map__node" style="top:62%;left:55%"><span class="pin-num">2</span><span class="map__lbl">CAMPO DEI FIORI</span></div>
-            <div class="map__node" style="top:62%;left:82%"><span class="pin-num">3</span><span class="map__lbl">ATLANTIS</span></div>
+            <svg class="map-svg" viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-label="Mapa del universo Seratta">
+              <defs>
+                <radialGradient id="landGrad" cx="45%" cy="35%" r="75%">
+                  <stop offset="0%" stop-color="#1f2a4d" stop-opacity="0.95"/>
+                  <stop offset="60%" stop-color="#0f1830" stop-opacity="0.95"/>
+                  <stop offset="100%" stop-color="#070b1a" stop-opacity="0.95"/>
+                </radialGradient>
+                <radialGradient id="landGradWarm" cx="45%" cy="35%" r="75%">
+                  <stop offset="0%" stop-color="#2a2740" stop-opacity="0.95"/>
+                  <stop offset="60%" stop-color="#15142c" stop-opacity="0.95"/>
+                  <stop offset="100%" stop-color="#080814" stop-opacity="0.95"/>
+                </radialGradient>
+                <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#f3d894"/>
+                  <stop offset="55%" stop-color="#c9a468"/>
+                  <stop offset="100%" stop-color="#8c6531"/>
+                </linearGradient>
+                <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#f3d894"/>
+                  <stop offset="70%" stop-color="#c9a468"/>
+                  <stop offset="100%" stop-color="#7d5728"/>
+                </radialGradient>
+                <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="2.5"/>
+                </filter>
+              </defs>
+
+              <!-- Ocean wave lines (decorative) -->
+              <g stroke="#c9a468" stroke-width="0.45" fill="none" opacity="0.18" stroke-linecap="round">
+                <path d="M30,60 Q 90,52 160,60 T 290,60"/>
+                <path d="M310,38 Q 360,32 410,38 T 510,38"/>
+                <path d="M40,165 Q 90,160 145,165"/>
+                <path d="M470,160 Q 510,156 555,160"/>
+                <path d="M30,335 Q 100,330 175,335 T 320,335"/>
+                <path d="M380,338 Q 440,332 500,338 T 580,338"/>
+                <path d="M50,200 Q 80,196 110,200"/>
+                <path d="M540,260 Q 560,257 580,260"/>
+              </g>
+
+              <!-- Subtle starfield dots -->
+              <g fill="#c9a468" opacity="0.22">
+                <circle cx="80" cy="40" r="0.8"/>
+                <circle cx="260" cy="20" r="0.9"/>
+                <circle cx="430" cy="20" r="0.7"/>
+                <circle cx="20" cy="120" r="0.8"/>
+                <circle cx="580" cy="110" r="0.9"/>
+                <circle cx="380" cy="195" r="0.7"/>
+                <circle cx="50" cy="345" r="0.8"/>
+                <circle cx="555" cy="320" r="0.9"/>
+              </g>
+
+              <!-- Compass rose top-right -->
+              <g transform="translate(548 58)" opacity="0.65">
+                <circle r="34" fill="none" stroke="#c9a468" stroke-width="0.5" opacity="0.45"/>
+                <circle r="26" fill="none" stroke="#c9a468" stroke-width="0.35" opacity="0.4"/>
+                <circle r="16" fill="none" stroke="#c9a468" stroke-width="0.3" opacity="0.5"/>
+                <g fill="url(#goldGrad)">
+                  <path d="M0,-30 L3.5,-3.5 L30,0 L3.5,3.5 L0,30 L-3.5,3.5 L-30,0 L-3.5,-3.5 Z"/>
+                  <path d="M21,-21 L2.5,-2.5 L21,21 L-2.5,2.5 Z" opacity="0.55"/>
+                </g>
+                <text y="-38" text-anchor="middle" fill="#e6c181" font-family="'Cinzel',serif" font-size="7" letter-spacing="1.5">N</text>
+                <text y="44" text-anchor="middle" fill="#e6c181" font-family="'Cinzel',serif" font-size="7" letter-spacing="1.5">S</text>
+                <text x="-40" y="2" text-anchor="middle" fill="#e6c181" font-family="'Cinzel',serif" font-size="7" letter-spacing="1.5">O</text>
+                <text x="40" y="2" text-anchor="middle" fill="#e6c181" font-family="'Cinzel',serif" font-size="7" letter-spacing="1.5">E</text>
+              </g>
+
+              <!-- ============ TERRITORIES ============ -->
+
+              <!-- 5 MEDELLÍN -->
+              <g class="t-shape" data-territory="medellin" tabindex="0" role="button" aria-label="Medellín">
+                <path d="M 60,95 Q 50,75 75,58 Q 110,42 155,52 Q 195,60 208,90 Q 215,120 192,148 Q 158,165 110,155 Q 70,140 60,95 Z" fill="url(#landGrad)" stroke="url(#goldGrad)" stroke-width="1.4" opacity="0.95"/>
+                <path d="M 60,95 Q 50,75 75,58 Q 110,42 155,52 Q 195,60 208,90 Q 215,120 192,148 Q 158,165 110,155 Q 70,140 60,95 Z" fill="none" stroke="#c9a468" stroke-width="0.4" opacity="0.5" transform="translate(0,2)"/>
+                <!-- mountains illustration -->
+                <g transform="translate(132 108)" stroke="#c9a468" stroke-width="1.3" fill="none" stroke-linejoin="round">
+                  <path d="M-30,18 L-14,-4 L-4,10 L8,-14 L22,8 L30,18 Z"/>
+                  <path d="M-14,-4 L-10,0 M8,-14 L4,-8" stroke-width="0.8" opacity="0.7"/>
+                  <line x1="-30" y1="18" x2="30" y2="18" stroke-width="0.9"/>
+                </g>
+                <!-- pin -->
+                <g transform="translate(150 50)">
+                  <circle r="16" fill="url(#pinGlow)" filter="url(#softGlow)" opacity="0.5"/>
+                  <circle r="13" fill="url(#pinGlow)" stroke="#8c6531" stroke-width="0.6"/>
+                  <text y="4.5" text-anchor="middle" fill="#1a1006" font-family="'Cinzel',serif" font-size="13" font-weight="700">5</text>
+                </g>
+                <text x="135" y="184" text-anchor="middle" fill="#f3e9d2" font-family="'Cinzel',serif" font-size="11" letter-spacing="2.2" font-weight="600">MEDELLÍN</text>
+              </g>
+
+              <!-- 4 CARTAGENA -->
+              <g class="t-shape" data-territory="cartagena" tabindex="0" role="button" aria-label="Cartagena">
+                <path d="M 320,75 Q 310,48 358,38 Q 425,28 485,55 Q 535,82 525,135 Q 505,178 450,182 Q 388,182 348,160 Q 310,135 320,75 Z" fill="url(#landGradWarm)" stroke="url(#goldGrad)" stroke-width="1.5"/>
+                <!-- fortress + palm illustration -->
+                <g transform="translate(425 115)" stroke="#c9a468" fill="none" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round">
+                  <!-- crenellated wall -->
+                  <path d="M-34,18 L-34,2 L-29,2 L-29,-4 L-22,-4 L-22,2 L-16,2 L-16,-4 L-9,-4 L-9,2 L-4,2 L-4,18 Z"/>
+                  <rect x="-22" y="6" width="8" height="12"/>
+                  <line x1="-34" y1="18" x2="-4" y2="18" stroke-width="1.6"/>
+                  <!-- palm tree -->
+                  <path d="M14,18 L14,-6"/>
+                  <path d="M14,-6 Q 4,-14 -6,-10 M14,-6 Q 24,-14 34,-10 M14,-6 Q 9,-22 4,-25 M14,-6 Q 19,-22 24,-25"/>
+                  <circle cx="14" cy="-6" r="1.5" fill="#c9a468"/>
+                </g>
+                <!-- pin -->
+                <g transform="translate(428 36)">
+                  <circle r="16" fill="url(#pinGlow)" filter="url(#softGlow)" opacity="0.5"/>
+                  <circle r="13" fill="url(#pinGlow)" stroke="#8c6531" stroke-width="0.6"/>
+                  <text y="4.5" text-anchor="middle" fill="#1a1006" font-family="'Cinzel',serif" font-size="13" font-weight="700">4</text>
+                </g>
+                <text x="425" y="64" text-anchor="middle" fill="#f3e9d2" font-family="'Cinzel',serif" font-size="11" letter-spacing="2.2" font-weight="600">CARTAGENA</text>
+              </g>
+
+              <!-- 1 BOGOTÁ 114 -->
+              <g class="t-shape" data-territory="bogota" tabindex="0" role="button" aria-label="Bogotá 114">
+                <path d="M 45,245 Q 36,225 65,210 Q 110,200 158,215 Q 200,228 200,265 Q 195,295 150,308 Q 95,313 58,292 Q 40,275 45,245 Z" fill="url(#landGrad)" stroke="url(#goldGrad)" stroke-width="1.4"/>
+                <!-- cathedral illustration -->
+                <g transform="translate(132 264)" stroke="#c9a468" fill="none" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+                  <!-- center dome + cross -->
+                  <path d="M-6,0 Q 0,-12 6,0 Z"/>
+                  <line x1="0" y1="-18" x2="0" y2="-12"/>
+                  <line x1="-2" y1="-15" x2="2" y2="-15"/>
+                  <!-- twin towers -->
+                  <rect x="-22" y="0" width="7" height="20"/>
+                  <rect x="15" y="0" width="7" height="20"/>
+                  <path d="M-22,0 L-18.5,-7 L-15,0"/>
+                  <path d="M15,0 L18.5,-7 L22,0"/>
+                  <!-- main body -->
+                  <rect x="-15" y="4" width="30" height="16"/>
+                  <rect x="-5" y="8" width="10" height="12"/>
+                  <line x1="-22" y1="20" x2="22" y2="20" stroke-width="1.4"/>
+                </g>
+                <!-- pin -->
+                <g transform="translate(62 208)">
+                  <circle r="16" fill="url(#pinGlow)" filter="url(#softGlow)" opacity="0.5"/>
+                  <circle r="13" fill="url(#pinGlow)" stroke="#8c6531" stroke-width="0.6"/>
+                  <text y="4.5" text-anchor="middle" fill="#1a1006" font-family="'Cinzel',serif" font-size="13" font-weight="700">1</text>
+                </g>
+                <text x="128" y="332" text-anchor="middle" fill="#f3e9d2" font-family="'Cinzel',serif" font-size="11" letter-spacing="2.2" font-weight="600">BOGOTÁ 114</text>
+              </g>
+
+              <!-- 2 CAMPO DEI FIORI -->
+              <g class="t-shape" data-territory="campo" tabindex="0" role="button" aria-label="Campo dei Fiori">
+                <path d="M 240,248 Q 232,228 268,218 Q 320,212 355,238 Q 372,265 348,292 Q 308,308 268,298 Q 238,283 240,248 Z" fill="url(#landGrad)" stroke="url(#goldGrad)" stroke-width="1.4"/>
+                <!-- sailboat illustration -->
+                <g transform="translate(300 268)" stroke="#c9a468" fill="none" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round">
+                  <!-- mast -->
+                  <line x1="0" y1="-18" x2="0" y2="8"/>
+                  <!-- main sail -->
+                  <path d="M0,-18 L0,6 L20,6 Z"/>
+                  <!-- jib sail -->
+                  <path d="M0,-18 L-14,6 L0,6 Z"/>
+                  <!-- hull -->
+                  <path d="M-22,10 Q 0,22 22,10 L18,16 L-18,16 Z"/>
+                  <!-- waves -->
+                  <path d="M-26,20 Q -20,18 -14,20 M-10,20 Q -4,18 2,20 M6,20 Q 12,18 18,20 M22,20 Q 26,18 30,20" stroke-width="0.7" opacity="0.7"/>
+                </g>
+                <!-- pin -->
+                <g transform="translate(258 216)">
+                  <circle r="16" fill="url(#pinGlow)" filter="url(#softGlow)" opacity="0.5"/>
+                  <circle r="13" fill="url(#pinGlow)" stroke="#8c6531" stroke-width="0.6"/>
+                  <text y="4.5" text-anchor="middle" fill="#1a1006" font-family="'Cinzel',serif" font-size="13" font-weight="700">2</text>
+                </g>
+                <text x="298" y="325" text-anchor="middle" fill="#f3e9d2" font-family="'Cinzel',serif" font-size="10" letter-spacing="1.8" font-weight="600">CAMPO DEI FIORI</text>
+              </g>
+
+              <!-- 3 ATLANTIS -->
+              <g class="t-shape" data-territory="atlantis" tabindex="0" role="button" aria-label="Atlantis">
+                <path d="M 395,250 Q 388,228 425,215 Q 488,210 535,235 Q 558,262 538,292 Q 492,308 442,305 Q 402,295 395,250 Z" fill="url(#landGrad)" stroke="url(#goldGrad)" stroke-width="1.4"/>
+                <!-- triumphal arch illustration -->
+                <g transform="translate(480 268)" stroke="#c9a468" fill="none" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round">
+                  <!-- columns/sides -->
+                  <path d="M-22,15 L-22,-2 Q -22,-16 0,-16 Q 22,-16 22,-2 L 22,15"/>
+                  <line x1="-15" y1="15" x2="-15" y2="3"/>
+                  <line x1="15" y1="15" x2="15" y2="3"/>
+                  <path d="M-15,3 Q 0,-10 15,3" />
+                  <!-- top entablature -->
+                  <rect x="-26" y="15" width="52" height="3"/>
+                  <line x1="-30" y1="20" x2="30" y2="20" stroke-width="1.4"/>
+                  <!-- center decoration -->
+                  <circle cx="0" cy="-6" r="2" fill="#c9a468"/>
+                </g>
+                <!-- pin -->
+                <g transform="translate(418 218)">
+                  <circle r="16" fill="url(#pinGlow)" filter="url(#softGlow)" opacity="0.5"/>
+                  <circle r="13" fill="url(#pinGlow)" stroke="#8c6531" stroke-width="0.6"/>
+                  <text y="4.5" text-anchor="middle" fill="#1a1006" font-family="'Cinzel',serif" font-size="13" font-weight="700">3</text>
+                </g>
+                <text x="475" y="328" text-anchor="middle" fill="#f3e9d2" font-family="'Cinzel',serif" font-size="11" letter-spacing="2.2" font-weight="600">ATLANTIS</text>
+              </g>
+            </svg>
           </div>
         </div>
         <div class="actions-row">
-          <div class="action"><span class="action__ic">⚲</span><span>DESCUBRE</span></div>
-          <div class="action"><span class="action__ic">⚐</span><span>CONQUISTA</span></div>
-          <div class="action"><span class="action__ic">★</span><span>ACUMULA</span></div>
-          <div class="action"><span class="action__ic">♚</span><span>DISFRUTA</span></div>
+          <div class="action" data-go="reservas">
+            <span class="action__ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M16 8l-3 5-5 3 3-5 5-3z" fill="currentColor" stroke="none"/></svg></span>
+            <span>DESCUBRE</span>
+          </div>
+          <div class="action" data-go="misiones">
+            <span class="action__ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg></span>
+            <span>CONQUISTA</span>
+          </div>
+          <div class="action" data-go="pasaporte">
+            <span class="action__ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.3l6.1-.7L12 3z"/></svg></span>
+            <span>ACUMULA</span>
+          </div>
+          <div class="action" data-go="concierge">
+            <span class="action__ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 17h16M5 17a7 7 0 0 1 14 0M12 7v-2M11 5h2"/></svg></span>
+            <span>DISFRUTA</span>
+          </div>
         </div>
       </div>
 
