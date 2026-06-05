@@ -149,9 +149,9 @@ h1,h2,h3,h4{margin:0}
 .universe__text .small{color:var(--cream-2);line-height:1.55}
 .universe__text .btn{align-self:flex-start;margin-top:4px}
 .map{position:relative;min-height:320px;background:
-  radial-gradient(ellipse at 30% 20%,rgba(40,55,100,.35),transparent 55%),
-  radial-gradient(ellipse at 80% 80%,rgba(60,40,100,.2),transparent 55%),
-  linear-gradient(160deg,#0a1024 0%,#070a18 60%,#04060f 100%);
+  radial-gradient(ellipse at 30% 20%,rgba(34,52,92,.4),transparent 55%),
+  radial-gradient(ellipse at 80% 80%,rgba(20,34,66,.35),transparent 55%),
+  linear-gradient(160deg,#0a1430 0%,#081024 60%,#050a18 100%);
   border:1px solid rgba(201,164,104,.22);
   border-radius:14px;
   overflow:hidden;
