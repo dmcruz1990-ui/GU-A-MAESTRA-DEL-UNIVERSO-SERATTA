@@ -52,6 +52,28 @@
     row.addEventListener('scroll', sync, { passive: true });
   });
 
+  // Experience survey: star rating + submit acknowledgement
+  const survey = document.getElementById('surveyForm');
+  if (survey) {
+    const stars = [...survey.querySelectorAll('.star')];
+    const ratingInput = survey.querySelector('input[name="rating"]');
+    const paint = (val) => stars.forEach(s => s.classList.toggle('on', +s.dataset.v <= val));
+    stars.forEach(s => {
+      s.addEventListener('mouseenter', () => paint(+s.dataset.v));
+      s.addEventListener('click', () => { ratingInput.value = s.dataset.v; paint(+s.dataset.v); });
+    });
+    survey.querySelector('.rating').addEventListener('mouseleave', () => paint(+ratingInput.value || 0));
+
+    survey.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(survey).entries());
+      console.log('Encuesta enviada:', data); // hook a backend/Concierge here
+      survey.querySelectorAll('.field, .survey__visit, .survey__submit').forEach(el => el.style.display = 'none');
+      const thanks = survey.querySelector('.survey__thanks');
+      thanks.hidden = false;
+    });
+  }
+
   const hash = window.location.hash.replace('#', '');
   if (hash && document.querySelector(`[data-screen="${hash}"]`)) show(hash);
 

@@ -925,6 +925,62 @@
         </div>
       </div>
 
+      <div class="card survey-card">
+        <div class="survey__head">
+          <div class="card__label">ENCUESTA DE EXPERIENCIA <span class="spark gold">✦</span></div>
+          <span class="overline muted">Tu opinión nos acerca a la perfección · +40 Memorias</span>
+        </div>
+        <form class="survey" id="surveyForm">
+          <div class="survey__visit">
+            <div class="sv-img" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=200&q=80')"></div>
+            <div>
+              <p class="overline gold">ÚLTIMA VISITA</p>
+              <h4 class="serif lg">Ánima · Atlantis</h4>
+              <p class="muted small">15 de mayo · 8:00 PM · 2 personas</p>
+            </div>
+          </div>
+
+          <label class="field">
+            <span class="field__lbl">¿Qué asesor te atendió?</span>
+            <select name="asesor" required>
+              <option value="" disabled selected>Selecciona tu anfitrión</option>
+              <option>Francesco Di Salvo</option>
+              <option>Valentina Restrepo</option>
+              <option>Mateo Gómez</option>
+              <option>Camila Torres</option>
+              <option>Andrés Salcedo</option>
+              <option>No recuerdo</option>
+            </select>
+          </label>
+
+          <div class="field-row">
+            <label class="field">
+              <span class="field__lbl">Plato que <b class="gold">más</b> te gustó</span>
+              <input name="plato_mas" type="text" placeholder="Ej. Nigiri Toro de Salmón" required />
+            </label>
+            <label class="field">
+              <span class="field__lbl">Plato que <b class="gold">menos</b> te gustó</span>
+              <input name="plato_menos" type="text" placeholder="Ej. (opcional)" />
+            </label>
+          </div>
+
+          <div class="field">
+            <span class="field__lbl">¿Cómo calificarías tu experiencia?</span>
+            <div class="rating" role="radiogroup" aria-label="Calificación">
+              <button type="button" class="star" data-v="1" aria-label="1 estrella">★</button>
+              <button type="button" class="star" data-v="2" aria-label="2 estrellas">★</button>
+              <button type="button" class="star" data-v="3" aria-label="3 estrellas">★</button>
+              <button type="button" class="star" data-v="4" aria-label="4 estrellas">★</button>
+              <button type="button" class="star" data-v="5" aria-label="5 estrellas">★</button>
+              <input type="hidden" name="rating" value="" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--gold survey__submit">ENVIAR ENCUESTA →</button>
+          <p class="survey__thanks" hidden>✦ ¡Gracias, Jairo! Sumaste <b>+40 Memorias</b> por compartir tu experiencia.</p>
+        </form>
+      </div>
+
       <div class="card quote-card">
         <span class="big-q">"</span>
         <p class="serif italic xl">Las mejores memorias<br/>no se coleccionan.<br/>Se viven.</p>

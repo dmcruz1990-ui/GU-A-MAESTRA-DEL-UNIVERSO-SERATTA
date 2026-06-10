@@ -452,6 +452,40 @@ h1,h2,h3,h4{margin:0}
 .quote-card .signature{font-family:'Dancing Script',cursive;font-size:26px;margin:8px 0 4px;text-align:center}
 .quote-card .watermark{position:absolute;right:14px;bottom:6px;font-size:60px;color:var(--gold);opacity:.15}
 
+/* ========== SURVEY / ENCUESTA ========== */
+.survey-card{padding:20px}
+.survey__head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.survey{display:flex;flex-direction:column;gap:16px}
+.survey__visit{display:flex;align-items:center;gap:14px;padding:12px;background:rgba(15,10,6,.55);border:1px solid var(--line);border-radius:12px}
+.sv-img{width:58px;height:58px;border-radius:10px;background-size:cover;background-position:center;border:1px solid var(--gold);flex:0 0 auto}
+.survey__visit h4{color:var(--cream-3);margin:2px 0}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field__lbl{font-size:11px;letter-spacing:.16em;color:var(--cream-2);text-transform:uppercase;font-weight:500}
+.field__lbl b{font-weight:700}
+.field input,.field select{
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:13px 14px;
+  color:var(--cream-3);
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  outline:none;
+  transition:border-color .2s,box-shadow .2s;
+  width:100%;
+}
+.field input::placeholder{color:var(--muted-2)}
+.field input:focus,.field select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,164,104,.15)}
+.field select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23c9a468' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.field select option{background:#1a1208;color:var(--cream-3)}
+.rating{display:flex;gap:8px}
+.star{background:none;border:none;font-size:30px;line-height:1;color:rgba(201,164,104,.28);cursor:pointer;padding:0;transition:transform .15s,color .15s}
+.star:hover{transform:scale(1.15)}
+.star.on{color:var(--gold);text-shadow:0 0 12px rgba(201,164,104,.5)}
+.survey__submit{margin-top:2px;align-self:flex-start;padding:13px 26px}
+.survey__thanks{font-size:13px;color:var(--gold);letter-spacing:.04em;background:rgba(201,164,104,.1);border:1px solid var(--gold);border-radius:10px;padding:12px 14px;text-align:center;margin:0}
+
 .events .ev-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
 .ev-card{position:relative;aspect-ratio:1.1;background-size:cover;background-position:center;border-radius:10px;padding:8px;display:flex;flex-direction:column;justify-content:space-between;color:var(--cream-3);overflow:hidden}
 .ev-date{background:#1a1208;border:1px solid var(--gold);color:var(--gold);font-family:'Cinzel',serif;font-size:9px;letter-spacing:.15em;padding:4px 6px;border-radius:6px;align-self:flex-start;text-align:center;line-height:1.2}
