@@ -933,9 +933,29 @@
         <form class="survey" id="surveyForm">
           <div class="survey__visit">
             <div class="sv-img" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=200&q=80')"></div>
-            <div>
+            <div class="survey__visit-body">
               <p class="overline gold">ÚLTIMA VISITA</p>
-              <h4 class="serif lg">Ánima · Atlantis</h4>
+              <label class="field field--inline">
+                <span class="field__lbl">Restaurante visitado</span>
+                <select name="restaurante" id="surveyRest" required>
+                  <option value="Ánima" data-terr="Atlantis" selected>Ánima · Atlantis</option>
+                  <option value="Seratta" data-terr="Territorio 114">Seratta · Territorio 114</option>
+                  <option value="Viva la Vida" data-terr="Territorio 114">Viva la Vida · Territorio 114</option>
+                  <option value="OMM" data-terr="Territorio 114">OMM · Territorio 114</option>
+                  <option value="María Antonietta" data-terr="Territorio 114">María Antonietta · Territorio 114</option>
+                  <option value="Giornatta" data-terr="Territorio 114">Giornatta · Territorio 114</option>
+                  <option value="Bruce" data-terr="Territorio 114">Bruce · Territorio 114</option>
+                  <option value="Campo dei Fiori" data-terr="Campo dei Fiori">Campo dei Fiori · Usaquén</option>
+                  <option value="Maldita Primavera" data-terr="Campo dei Fiori">Maldita Primavera · Campo dei Fiori</option>
+                  <option value="Todo es Color de Rosa" data-terr="Atlantis">Todo es Color de Rosa · Atlantis</option>
+                  <option value="Gallo Colorado" data-terr="Atlantis">Gallo Colorado · Atlantis</option>
+                  <option value="Omnia" data-terr="Atlantis">Omnia · Atlantis</option>
+                  <option value="Otafuku" data-terr="Atlantis">Otafuku · Atlantis</option>
+                  <option value="Viva la Vida Cartagena" data-terr="Cartagena">Viva la Vida · Cartagena</option>
+                  <option value="Frenesí" data-terr="Cartagena">Frenesí · Cartagena</option>
+                  <option value="La La La" data-terr="Cartagena">La La La · Cartagena</option>
+                </select>
+              </label>
               <p class="muted small">15 de mayo · 8:00 PM · 2 personas</p>
             </div>
           </div>
@@ -956,13 +976,14 @@
           <div class="field-row">
             <label class="field">
               <span class="field__lbl">Plato que <b class="gold">más</b> te gustó</span>
-              <input name="plato_mas" type="text" placeholder="Ej. Nigiri Toro de Salmón" required />
+              <input name="plato_mas" type="text" list="menuPlatos" placeholder="Elige o escribe un plato" autocomplete="off" required />
             </label>
             <label class="field">
               <span class="field__lbl">Plato que <b class="gold">menos</b> te gustó</span>
-              <input name="plato_menos" type="text" placeholder="Ej. (opcional)" />
+              <input name="plato_menos" type="text" list="menuPlatos" placeholder="Opcional" autocomplete="off" />
             </label>
           </div>
+          <datalist id="menuPlatos"></datalist>
 
           <div class="field">
             <span class="field__lbl">¿Cómo calificarías tu experiencia?</span>

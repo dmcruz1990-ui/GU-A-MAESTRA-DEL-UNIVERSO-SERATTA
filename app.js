@@ -55,6 +55,40 @@
   // Experience survey: star rating + submit acknowledgement
   const survey = document.getElementById('surveyForm');
   if (survey) {
+    // Signature dishes per restaurant (Imperdibles from the Grand Tour master guide)
+    const menus = {
+      'Seratta': ['Jamón Ibérico de Bellota', 'Patatas Bravas', 'Paella', 'Pastas artesanales', 'Pizzas artesanales'],
+      'Viva la Vida': ['Nigiri Toro de Salmón', 'Arroz Tesoro de la Tierra', 'Makis Signature', 'Robatas'],
+      'OMM': ['Torisurai', 'Makis', 'Nigiris', 'Robatas'],
+      'María Antonietta': ['Sopa de Cebolla', 'Lomo Wellington', 'Escargots'],
+      'Giornatta': ['Croissant de Pistacho', 'Café', 'Omelettes'],
+      'Bruce': ['Torta de Chocolate Bruce', 'Helados artesanales'],
+      'Campo dei Fiori': ['Chicken Parm', 'Pasta Carbonara', 'Pizza La Felicità'],
+      'Maldita Primavera': ['Huevos Rotos', 'Arroces', 'Jamón Ibérico', 'Tapas'],
+      'Todo es Color de Rosa': ['Pasta La Pompeya'],
+      'Gallo Colorado': ['Volcán de Nachos', 'Tacos Signature', 'Quesadillas'],
+      'Omnia': ['Makis', 'Nigiris', 'Robatas'],
+      'Otafuku': ['Omakase del Chef', 'Nigiris de temporada'],
+      'Ánima': [],
+      'Viva la Vida Cartagena': ['Makis Signature', 'Robatas', 'Frutas Tropicales'],
+      'Frenesí': [],
+      'La La La': ['Pizza', 'Pasta'],
+    };
+
+    const restSel = survey.querySelector('#surveyRest');
+    const datalist = survey.querySelector('#menuPlatos');
+    const dishInputs = survey.querySelectorAll('input[list="menuPlatos"]');
+    const fillMenu = () => {
+      const dishes = menus[restSel.value] || [];
+      datalist.innerHTML = dishes.map(d => `<option value="${d}"></option>`).join('');
+      dishInputs.forEach(i => {
+        i.value = '';
+        i.placeholder = dishes.length ? 'Elige o escribe un plato' : 'Escribe un plato';
+      });
+    };
+    restSel.addEventListener('change', fillMenu);
+    fillMenu();
+
     const stars = [...survey.querySelectorAll('.star')];
     const ratingInput = survey.querySelector('input[name="rating"]');
     const paint = (val) => stars.forEach(s => s.classList.toggle('on', +s.dataset.v <= val));
